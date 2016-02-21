@@ -1,0 +1,122 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ *{
+   margin:0;
+   padding:0;
+ }
+header{
+ padding-top:1%;
+ padding-bottom:.5%;
+ background: #4099ff; 
+ width:100%;
+ color: white;
+}
+#logo{
+ width:120px;
+ height:120px;
+ float:left;
+}
+
+name{
+  float:left;
+}
+nav {
+  
+  float: right;
+  margin-top:-1.7%;
+}
+
+li{
+  list-style:none;
+  color:white;
+  padding:5px;
+}
+a{
+  text-decoration:none;
+  color:#fff;
+}
+
+a:hover{
+  color:#00f;\
+  font-weight:bold;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  background: #4099ff;
+  color:white;
+  width:100%;
+  padding-top:1%;
+  padding-bottom:.5%;
+}
+
+article{
+  width:80%;
+  margin:auto;
+  margin-top: 5%;
+}
+
+#post_1{
+  float:left;
+  width:40%;
+  padding:4%;
+  border: 1px solid blue;
+}
+#post_2{
+  float:right;
+  width:40%;
+  padding:4%;
+  border: 1px solid blue;
+  padding-bottom:.25%;
+  
+}
+.heading{
+  display: inline;
+}
+
+h4{
+  margin-top:-20%;
+  margin-left:25%; 
+  margin-bottom:20%;
+}
+
+.about_1{
+  float:left;
+  width:40%;
+  padding:4%;
+  border: 1px solid blue;
+}
+.bird{
+  clear:left;
+  float:left;
+  width:40%;
+  margin-top:8%;
+}
+.about_2{
+  clear:right;
+   float:right;
+  width:40%;
+  padding:4%;
+  border: 1px solid blue;
+  padding-bottom:.25%;
+  margin-top:-17.5%;
+}
+
+
+
+  
+
