@@ -1,0 +1,96 @@
+$navbar-default-bg: #08088a;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#logo{
+  float: left;
+  font-size:1.7em;
+  color:#fff;
+  text-transform:uppercase;
+  letter-spacing:-1px;
+  font-weight:bold;
+}
+#navbar a{
+  color:#fff;
+}
+#dropdown a{
+  color:#000;
+}
+#logo:hover{
+  text-decoration:none;
+  color:#bbb;
+}
+
+.center{
+  text-align:center;
+}
+
+.jumbotron{
+  margin-top:90px;
+  background: url('code.jpg') no-repeat;
+  background-size:cover;
+  height: auto;
+}
+
+.jumbotron h1{
+  color:#eee;
+  text-align:center;
+  margin-bottom:30px;
+  letter-spacing:-1px;
+  font-weight:bold;
+  -webkit-text-stroke: 2px #538DFF;
+}
+
+.btn-xlarge{
+  font-size:1.7em;
+  background:linear-gradient(#538DFF, #033495);
+}
+
+.btn-xlarge:hover{
+  background:linear-gradient(#000, #ccc);
+}
+
+.article-actions{
+  border-top:1px solid #eaeaea;
+  padding-top:5px;
+}
+
+.description{
+  margin-top:0; 
+}
+
+.article-title{
+  font-weight:bold;
+  font-size:1.5em;
+}
+
+.article-body{
+  border-top:1px solid #eaeaea;
+  padding-top:15px;
+  padding-bottom:15px;
+}
+footer{
+  margin-top:90px;
+  padding-top:5px;
+  border-top:1px solid #eaeaea;
+  color: #777;
+}
+
+footer a:hover{
+  color:#222;
+}
+
+footer small{
+  float:left;
+}
+
+footer ul{
+  float:right;
+  list-style:none;
+}
+
+footer ul li{
+  float:left;
+  margin-left:15px;
+}
