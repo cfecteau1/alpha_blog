@@ -1,7 +1,7 @@
 class  UsersController < ApplicationController
   before_action :set_user, only: [:edit, :update, :show] 
   before_action :require_same_user, only: [:edit, :update]
-end
+
   def index 
     @users = User.paginate(page: params[:page], per_page: 5)
   end
@@ -48,4 +48,5 @@ end
       flash[:danger] = "You can only edit your own account"
       redirect_to root_path
     end  
+  end
 end
