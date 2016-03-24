@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :require_admin, except: [:index, :show]
-  
+  before_action :category_set, only: [:show, :destroy]
   def index
     @categories = Category.paginate(page: params[:page], per_page: 5)
   end
@@ -20,11 +20,10 @@ class CategoriesController < ApplicationController
   end
   
   def show
-
+    @category_articles = @category.articles.paginate(page: params[:page], per_page: 5)
   end
   
   def destroy
-    @category = Category.find(params[:id])
     @category.destroy
     flash[:danger] = "category has been deleted"
     redirect_to categories_path
@@ -39,6 +38,10 @@ class CategoriesController < ApplicationController
       redirect_to categories_path
     end
   end
+  def category_set
+   @category = Category.find(params[:id])
+  end
+   
   
  
 end
