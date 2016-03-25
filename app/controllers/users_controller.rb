@@ -34,11 +34,11 @@ class  UsersController < ApplicationController
     end
   end
   def show
-   @user_articles = @user.articles.paginate(page: params[:page], per_page: 5)
+   @user_articles = @user.articles.paginate(page: params[:page], per_page: 5).order("updated_at DESC")
   end
   def destroy
     @user.destroy
-    flash[:danger] = "User and all user articles have been deleted"
+    flash[:danger] = "User #{@user.username} and all associated articles have been deleted"
     redirect_to users_path
   end
   private
