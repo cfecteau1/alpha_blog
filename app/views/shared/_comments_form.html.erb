@@ -1,0 +1,16 @@
+
+<div class="row" style="margin:auto">
+<%= form_for ([@article, @article.comments.build]) do |f| %>
+  <div class="form-group" >
+    <div class="control-label">
+      <%= f.label :comment %>
+    </div>
+    <div class="control-field">
+      <%= f.text_area :comment, rows: 5, class: "col-xs-12 ", placeholder: "Body of Article", autofocus: true  %>
+    </div>
+    <div class="actions" style="margin-top:20%;">
+      <%= f.submit class: 'btn btn-primary btn-lg' %>
+    </div>
+  </div>
+<% end %>
+</div>

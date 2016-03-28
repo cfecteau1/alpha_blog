@@ -22,7 +22,7 @@
   <hr>
   <%= simple_format(@article.description) %>  
   <% if @article.categories.any? %>
-    <p>Categories: <%= render @article.categories %></p>
+    <p>Categories: <%= @article.categories %></p>
   <% end %>
   <div class="article-actions">
     <% if logged_in? && (current_user == @article.user || current_user.admin?) %>
@@ -33,4 +33,25 @@
     <% end %>                                  
     <%= link_to "View all articles", articles_path, class:"btn btn-xs btn-success" %>
   </div>
+  <% unless @article.comments.empty? %>
+   <p>
+     <small> 
+       <%= @article.comments.count %> comments<% end %>
+      </small>
+    </p>
+<% unless @article.comments.empty? %>
+<div class= "well" style="background:#fff; border:1px solid #4b4bbf;">
+ <ul style="list-style:none;">
+   <% @article.comments.each do |comment|%>
+     <div class = "well" style="margin-left:-6%;">
+       <li>
+        <h5><%= comment.comment %></h5>
+       </li>
+       <li><small>Created by: <%= User.find(comment.user_id).username %>,  <%= time_ago_in_words(comment.created_at) %> ago,</small></li>
+     </div>   
+   <% end %>
+  </ul>
+</div>  
+<% end %>
+   <%= render "shared/comments_form" %> 
 </div>

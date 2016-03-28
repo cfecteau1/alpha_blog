@@ -18,6 +18,10 @@ delete 'logout', to: 'sessions#destroy'
 
 resources :categories
 
+resources :articles do
+  resources :comments
+end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

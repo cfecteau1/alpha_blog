@@ -1,0 +1,8 @@
+<ul>
+<% @article.comments.comment.each do |comment|%>
+  <li>
+    <blockquote><%= comment.comment %></blockquote>
+  </li>
+  <li><small><%= User.find(comment.user_id).username %></small></li>
+<% end %>
+</ul>
