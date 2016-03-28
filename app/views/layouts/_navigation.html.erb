@@ -23,10 +23,6 @@
               <li><%= link_to "New Article", new_article_path %></li>
               <li><%= link_to "Articles", articles_path %></li>
               <li><%= link_to "My Articles", user_path(current_user) %></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
             </ul>
           <% else %>  
             <li><%= link_to "Articles", articles_path %></li>
